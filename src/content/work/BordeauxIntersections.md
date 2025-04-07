@@ -1,7 +1,7 @@
 ---
 title: Smart Intersections
 publishDate: 2025-04-07 00:00:00
-img: /assets/smart_intersections.png
+img: /assets/borInter.png
 img_alt: Interface de l'application Smart Intersections affichant une carte interactive et des notifications
 description: |
   Smart Intersections est une application mobile Android conçue pour améliorer la sécurité routière à Bordeaux. En exploitant les données ouvertes de Bordeaux Métropole, cette application offre une visualisation interactive des intersections critiques, une liste détaillée des chantiers et un système d’alertes personnalisé pour informer les usagers en temps réel.
