@@ -2,59 +2,61 @@
 title: Smart Intersections
 publishDate: 2025-04-07 00:00:00
 img: /assets/borInter.png
-img_alt: Interface de l'application Smart Intersections affichant une carte interactive et des notifications
+img_alt: Smart Intersections app interface showing an interactive map and notifications
 description: |
-  Smart Intersections est une application mobile Android conçue pour améliorer la sécurité routière à Bordeaux. En exploitant les données ouvertes de Bordeaux Métropole, cette application offre une visualisation interactive des intersections critiques, une liste détaillée des chantiers et un système d’alertes personnalisé pour informer les usagers en temps réel.
+  Smart Intersections is an Android mobile application designed to improve road safety in Bordeaux. By leveraging Bordeaux Métropole’s open data, this app provides an interactive visualization of critical intersections, a detailed list of roadworks, and a customizable alert system to notify users in real time.
 tags:
   - Android
-  - Sécurité Routière
+  - Road Safety
   - Open Data
   - Android Studio
 ---
 
-### Smart Intersections - Application Mobile pour la Sécurité Routière
+### Smart Intersections – Mobile App for Road Safety
 
 ##### Description
-Smart Intersections est une application mobile développée sous Android Studio, visant à améliorer la sécurité routière à Bordeaux. En exploitant les données ouvertes de Bordeaux Métropole, elle informe les usagers des intersections critiques et des chantiers en cours, tout en proposant des alertes personnalisées.
+Smart Intersections is a mobile application developed with Android Studio to enhance road safety in Bordeaux. It uses Bordeaux Métropole’s open data to inform users about critical intersections and ongoing roadworks, and offers personalized alerts.
 
-##### Fonctionnalités
-- **Carte interactive** : Affichage géolocalisé des intersections et chantiers, utilisant le Google Maps SDK pour une intégration native et performante.
-- **Liste des chantiers** : Consultation détaillée des zones de travaux avec fonctionnalités de recherche, filtrage et tri (par distance et type de chantier).
-- **Système d’alertes** : Notifications contextuelles basées sur la proximité des zones de travaux, avec configuration personnalisable et historique des alertes.
+##### Features
+- **Interactive Map**: Geolocated display of intersections and roadworks using the Google Maps SDK for native, high-performance integration.  
+- **Roadworks List**: Detailed view of work zones with search, filter, and sort capabilities (by distance and work type).  
+- **Alert System**: Contextual notifications based on proximity to roadworks, with customizable settings and alert history.
 
-##### Prérequis
-- Android Studio et Android SDK (Android 13 - API 33)
-- Émulateur ou appareil Android compatible (ex. Pixel 8)
-- Connexion Internet et permissions de localisation
+##### Requirements
+- Android Studio & Android SDK (Android 13 / API 33)  
+- Emulator or compatible Android device (e.g., Pixel 8)  
+- Internet connection and location permissions  
 
 ##### Installation
 
-1. **Installation sur appareil** :
-    - Téléchargez l’APK depuis le site officiel.
-    - Autorisez l'installation d’applications provenant de sources externes.
-    - Installez l'application sur votre appareil.
-    - Au premier lancement, accordez les permissions requises (localisation, accès réseau).
+1. **User Installation**:  
+   - Download the APK from the official site.  
+   - Allow installation from unknown sources.  
+   - Install the app on your device.  
+   - On first launch, grant the required permissions (location, network access).
 
-2. **Installation en développement** :
-    - Clonez le dépôt :
-      ```
-      git clone https://github.com/lamiaeJbira/BordeauxIntersections.git
-      cd BordeauxIntersections
-      ```
-    - Ouvrez le projet dans Android Studio.
-    - Compilez et lancez l'application sur un émulateur ou un appareil connecté.
+2. **Development Setup**:  
 
-##### Utilisation
-
-L'application est structurée autour de trois onglets principaux :
-- **Carte** : Visualisation interactive des intersections et chantiers, avec zoom automatique et contrôles intégrés.
-- **Liste** : Affichage détaillé des chantiers avec options de recherche, filtrage et tri.
-- **Alertes** : Configuration des notifications en fonction de la proximité des zones de travaux, avec consultation de l’historique des alertes.
+   - git clone https://github.com/lamiaeJbira/BordeauxIntersections.git
+   - cd BordeauxIntersections
 
 
-##### Tests et Validation
+* Open the project in Android Studio.
+* Build and run the app on an emulator or connected device.
 
-L'application a été testée sur l'émulateur Pixel 8 sous Android 13. Les tests incluent :
-- Vérification de la précision de la géolocalisation.
-- Validation du déclenchement des alertes contextuelles.
-- Tests de performance sur le chargement de la carte et la gestion des données.
+##### Usage
+
+The app is organized into three main tabs:
+
+* **Map**: Interactive view of intersections and roadworks with auto-zoom and built-in controls.
+* **List**: Detailed listing of roadworks with search, filter, and sort options.
+* **Alerts**: Configuration of proximity-based notifications and review of past alerts.
+
+##### Testing & Validation
+
+Tested on a Pixel 8 emulator running Android 13, including:
+
+* Location accuracy verification
+* Contextual alert triggering validation
+* Performance tests for map loading and data handling
+

@@ -1,87 +1,72 @@
 ---
 title: CycloEval
 publishDate: 2025-01-20
-img:  /assets/cycloEvalecran.png
-img_alt: l'image du site
+img: /assets/cycloEvalecran.png
+img_alt: Screenshot of the CycloEval web interface
 description: |
-  CycloEval est un projet visant à analyser les données de capteurs provenant de smartphones sur un vélo pour évaluer les conditions de conduite et détecter les chocs. Le projet utilise une combinaison de technologies pour collecter, traiter et visualiser les données.
-tags: 
-   - React
-   - Python
-   - Endpoints
-   - CI/CD
-   - Cloud 
+  CycloEval analyzes smartphone sensor data mounted on a bicycle to assess riding conditions and detect impacts. The project combines frontend, backend, and cloud technologies to collect, process, and visualize sensor data in real time.
+tags:
+  - React
+  - Python
+  - REST API
+  - CI/CD
+  - Docker
 ---
 
 ### CycloEval
 
 ##### Description
-CycloEval est un projet visant à analyser les données de capteurs provenant de smartphones sur un vélo pour évaluer les conditions de conduite et détecter les chocs. Le projet utilise une combinaison de technologies pour collecter, traiter et visualiser les données.
+CycloEval processes smartphone sensor logs captured on a bicycle to evaluate ride quality and flag shocks. It features a modern frontend, a FastAPI backend, and automated deployment pipelines.
 
-##### Fonctionnalités
-- Collecte de données : Utilisation de l'application Sensor Logger pour enregistrer les données des capteurs.
-- Traitement des données : Analyse des données de capteurs pour détecter les chocs et évaluer les conditions de conduite.
-- Visualisation : Affichage des trajectoires et des chocs sur une carte interactive.
+##### Features
+- **Data Collection**: Uses the Sensor Logger app to record accelerometer, gyroscope, and GPS streams.  
+- **Data Processing**: FastAPI endpoints analyze sensor streams to detect impacts and compute ride-condition metrics.  
+- **Visualization**: Interactive map view showing ride paths and detected shocks in real time.
 
-##### Prérequis
-- Node.js 18+ et npm (ou pnpm)
-- Python 3.8+
-- pip
+##### Requirements
+- Node.js 18+ and npm or pnpm  
+- Python 3.8+ with FastAPI & Uvicorn  
+- Docker & Docker Compose  
 
 ##### Installation
 
-**Frontend :**
+**Frontend**  
+1. Navigate to the `client` folder:
+   cd client
+2. Create a `.env` file:
+3. Install dependencies and start the dev server:
 
-1. Naviguez vers le répertoire `client` :
- 
-cd client
- 
-2. Créez un fichier `.env` avec le contenu suivant :
- 
-VITE_API_URL=http://localhost:8000
- 
-3. Installez les dépendances :
- 
-npm install
- 
-4. Démarrez le serveur de développement :
- 
-npm run dev
- 
-
-**Backend :**
-
-1. Installez les dépendances Python :
- 
-pip install -r server/requirements.txt
- 
-2. Démarrez le serveur FastAPI :
- 
-uvicorn server.main:app --host 127.0.0.1 --port 8000 --reload
- 
-
-**Server Setup :**
-
-Vous pouvez utiliser le script `deploy.sh` ou relancer manuellement les services.
-
-- Pour redéployer le projet :
-
-docker-compose down
-docker-compose up --build -d
-
-- Pour forcer le redéploiement (cette opération supprimera la base de données) :
-
-docker-compose down
-docker-compose up --build --force-recreate -d
+   - npm install
+   - npm run dev
 
 
-- Vérification de l'état :
-  - Pour le CI/CD et le webhook :
-    tail -f local_api.log
-  - Pour consulter les logs du backend et du frontend :
-    docker logs fastapi_backend
-    docker logs vite_frontend
+**Backend**
 
-Avant toute modification, assurez-vous de consulter les Dockerfiles des dossiers `server` et `client`, le fichier Docker Compose ainsi que le dossier Nginx. Testez toujours avec `npm run build` et `npm run dev` avant de pousser vos changements pour éviter de casser le pipeline CI/CD.
+1. Install Python dependencies:
 
-Enjoy ;)
+   pip install -r server/requirements.txt
+   
+2. Launch the FastAPI server:
+
+   uvicorn server.main:app --host 127.0.0.1 --port 8000 --reload
+
+
+**Full Stack Deployment**
+Use Docker Compose to build and run all services:
+
+- docker-compose down
+- docker-compose up --build -d
+
+
+To force recreate (drops the database):
+
+- docker-compose down
+- docker-compose up --build --force-recreate -d
+
+
+Check logs for CI/CD and services:
+
+- tail -f local_api.log
+- docker logs fastapi_backend
+- docker logs vite_frontend
+

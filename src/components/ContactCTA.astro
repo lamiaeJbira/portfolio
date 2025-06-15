@@ -4,12 +4,13 @@ import Icon from './Icon.astro';
 ---
 
 <aside>
-    <h2>Intéressé à collaborer ?</h2>
+    <h2>Interested in working together?</h2>
     <CallToAction href="mailto:lamiae.jbira@bordeaux-inp.fr">
-        Envoyez-moi un message
+        Drop me a line
         <Icon icon="paper-plane-tilt" size="1.2em" />
     </CallToAction>
 </aside>
+
 
 
 <style>
@@ -21,6 +22,8 @@ import Icon from './Icon.astro';
 		border-top: 1px solid var(--gray-800);
 		border-bottom: 1px solid var(--gray-800);
 		padding: 5rem 1.5rem;
+        margin-block: 4rem;   /* 4rem au-dessus + en dessous */
+        padding-inline: 1rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}

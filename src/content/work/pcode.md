@@ -1,10 +1,10 @@
 ---
-title: Projet de Compilation MyC-PCode
+title: MyC-to-PCode Compiler Project
 publishDate: 2024-02-25 00:00:00
 img: /assets/stock-2.jpg
-img_alt: Visualisation d'un processus de compilation de MyC vers P-Code
+img_alt: Visualization of the MyC to P-Code compilation process
 description: |
-  Ce projet développe un compilateur pour un mini langage impératif nommé MyC, qui est traduit en P-Code. Le compilateur couvre les six premières phases de compilation et inclut des fonctionnalités pour automatiser la comparaison des résultats avec les solutions correctes.
+  This project develops a compiler for a small imperative language called MyC, translating it into P-Code. The compiler covers the first six phases of compilation and includes features to automate the comparison of outputs against correct reference solutions.
 tags:
   - Compilation
   - MyC
@@ -12,38 +12,33 @@ tags:
   - GCC
 ---
 
-## Projet de Compilation MyC-PCode
+## MyC-to-PCode Compiler Project
 
-> Un projet pour développer un compilateur pour le langage MyC vers P-Code.
+> A project to build a compiler for the MyC language targeting P-Code.
 
-Ce projet vise à implémenter un compilateur pour un mini langage impératif nommé **MyC**, lequel est traduit en **P-Code**. Le compilateur actuel prend en charge les six premières phases de la compilation et gère jusqu'à l'exemple 17.
+This project aims to implement a compiler for a mini imperative language named **MyC**, which is translated into **P-Code**. The current compiler handles the first six phases of compilation and supports up through example 17.
 
-### Structure du Projet
+### Project Structure
 
-Le projet est structuré de manière à inclure les dossiers suivants :
+The repository is organized as follows:
 
-- **Répertoire de Correction** : Un dossier `correction` contient les solutions correctes pour tous les fichiers exemples. Un script shell `./test` compare automatiquement les résultats obtenus avec ces fichiers de correction.
+- **Reference Solutions**: The `correction` directory contains the correct outputs for all example files. A shell script (`./test`) automatically compares the compiler’s results against these reference solutions.
   
-- **Modifications apportées** : Tous les exemples du dossier `Pcode` se compilent sans erreur. Des modifications ont été faites pour corriger certains problèmes dans les fichiers d'exemples fournis. En particulier, les références à `stack[bp]+1` ont été remplacées par `stack[bp].int_value+1`.
+- **Modifications**: All examples in the `PCode` folder compile without errors. Adjustments were made to fix issues in the provided example files—specifically, replacing references to `stack[bp]+1` with `stack[bp].int_value+1`.
 
-### Instructions de Compilation
+### Compilation Instructions
 
-#### Compilation de MyC vers P-Code
+#### Compiling MyC to P-Code
 
-Pour compiler un fichier MyC en P-Code, suivez ces étapes :
+1. Run `make` to build the compiler.  
+2. Use `./run ExX` to compile a specific example, where **X** is the example number (for example, `Ex01`, `Ex02`, …, `Ex17`).
 
-1. Exécutez `make` pour construire le compilateur.
-2. Utilisez `./run ExX` pour compiler un exemple spécifique, où **X** correspond au numéro de l'exemple (par exemple, 01, 02, ..., 17).
+#### Compiling P-Code Files with GCC
 
-#### Compilation des fichiers P-Code avec GCC
-
-Pour compiler les fichiers P-Code avec GCC :
-
-1. Naviguez dans le répertoire `PCode`.
-2. Exécutez `make ExX` pour compiler un fichier spécifique, ou utilisez `makeall` pour compiler tous les fichiers en une seule commande.
+1. Change into the `PCode` directory.  
+2. Run `make ExX` to compile a specific P-Code file, or `make all` to compile all examples in one command.
 
 ### Contact
 
-Pour toute question ou assistance, vous pouvez contacter le responsable du projet.
+For questions or support, please reach out to the project maintainer.  
 
----

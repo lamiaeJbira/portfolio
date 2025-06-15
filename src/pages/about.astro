@@ -4,51 +4,78 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="À propos | Jbira Lamiae" description="Découvrez mon parcours et mes compétences en informatique et développement web.">
+<BaseLayout
+	title="About | Lamiae Jbira"
+	description="Learn more about my background, projects and technical skills in software and web development."
+>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="À propos de moi"
-				tagline="Merci de votre visite. Découvrez ci-dessous plus sur mon parcours et mes expériences."
+				title="About Me"
+				tagline="Thanks for stopping by. Below you’ll find a quick overview of my journey and experience."
 			>
-				<img
-					width="1553"
-					height="500"
-					src="/assets/at-work.jpg"
-					alt="Jbira Lamiae au travail avec un collègue"
-				/>
+				<div class = "flex justify-center gap-6">
+					<img
+						width="250"
+						height="250"
+						src="/assets/portrait.jpg"
+						alt="Lamiae Jbira collaborating with a colleague"
+					/>
+				</div>
 			</Hero>
 
+			{/* ───────────────────────── Journey ───────────────────────── */}
 			<section>
-				<h2 class="section-title">Mon Parcours</h2>
+				<h2 class="section-title">My Journey</h2>
 				<div class="content">
 					<p>
-						Après deux années intenses en classes préparatoires aux grandes écoles au Lycée d'Excellence de Benguerir, spécialisées en mathématiques et physique, j'ai intégré l'ENSEIRB-MATMECA, une école d'ingénieurs reconnue pour sa formation en informatique. Actuellement en troisième année, je me spécialise en développement web.
+						After two demanding years in preparatory classes&nbsp;(MPSI/MP) at Lycée
+						d’Excellence de Benguerir, focused on mathematics and physics, I joined
+						<strong> ENSEIRB-MATMECA</strong>, a top engineering school in Bordeaux. I am now
+						in my final year and will graduate in&nbsp;2025 with a major in software engineering
+						and backend development.
 					</p>
 					<p>
-						Durant mes deux premières années en tant que généraliste en informatique, j'ai travaillé sur plusieurs projets, notamment en développement de logiciels et en intelligence artificielle, ce qui m'a permis de renforcer mes compétences techniques et de collaborer efficacement au sein d'équipes projets.
+						Throughout my studies I have delivered multiple projects in backend, full-stack
+						web and applied machine learning, sharpening both my technical skills and my
+						ability to collaborate in agile teams.
 					</p>
 					<p>
-						Récemment, j'ai effectué un stage de quatre mois chez Airbus en collaboration avec I2M à Bordeaux, où j'ai pu appliquer mes connaissances en environnement professionnel et travailler sur des projets d'envergure qui ont renforcé mon intérêt et mes compétences en développement web et logiciel.
+						•&nbsp;During a four-month internship at <strong>Airbus / I2M</strong>, I built a real-time
+						VR gesture-recognition pipeline (99 % accuracy, &lt; 10 ms latency).<br/>
+						•&nbsp;Currently, I am interning at <strong>Atos</strong> on the <strong
+					>Allianz </strong>SIDP
+						platform, adding contract-lifecycle and data-integrity features with Spring Boot,
+						Angular and AWS.
 					</p>
 				</div>
 			</section>
+
+			{/* ───────────────────────── Education ───────────────────────── */}
 			<section>
-				<h2 class="section-title">Éducation</h2>
+				<h2 class="section-title">Education</h2>
 				<div class="content">
 					<p>
-						Ingénierie informatique, ENSEIRB-MATMECA, spécialisation en développement web.
+						M.Eng. in Computer Engineering (graduating 2025), ENSEIRB-MATMECA —
+						specialization in software &amp; backend development.
 					</p>
 					<p>
-						Classes préparatoires MPSI/MP, Lycée d'Excellence de Benguerir.
+						Classes préparatoires MPSI/MP (Maths & Physics), Lycée d’Excellence de Benguerir.
 					</p>
 				</div>
 			</section>
+
+			{/* ───────────────────────── Skills ───────────────────────── */}
 			<section>
-				<h2 class="section-title">Compétences</h2>
+				<h2 class="section-title">Core Skills</h2>
 				<div class="content">
 					<p>
-						Experte en développement web, avec une forte capacité en gestion de projets technologiques, programmation en divers langages (JavaScript, Python, C++), et une expérience significative en IA et logiciels.
+						• <strong>Backend / Microservices:</strong> Java 17, Spring Boot 3, Node.js, REST, gRPC.<br/>
+						• <strong>Web Front-End:</strong> React, TypeScript, responsive UI &amp; accessibility.<br/>
+						• <strong>Data &amp; Observability:</strong> PostgreSQL, SQLite /PostGIS, Kafka,
+						Jenkins, metrics &amp; logging pipelines.<br/>
+						• <strong>DevOps:</strong> Docker, GitLab CI, GitHub Actions, AWS basics.<br/>
+						• Passionate about clean code, TDD and continuous improvement.
 					</p>
 				</div>
 			</section>

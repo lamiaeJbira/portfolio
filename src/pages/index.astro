@@ -24,66 +24,54 @@ const projects = (await getCollection('work'))
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
-
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
+	{/* 1. Conteneur vertical centré */}
+	<div class="flex flex-col items-center justify-center gap-20 lg:gap-48">
+		{/* 2. Sous-conteneur maxi 600 px (par ex.) et texte centré */}
+		<div class="max-w-3xl flex flex-col items-center text-center gap-8 lg:gap-20">
+			<header class="flex flex-col items-center">
 				<Hero
-    				title="Bonjour, je suis JBIRA Lamiae"
-    				tagline="Étudiante en informatique à l'ENSEIRB MATMECA, spécialisée en développement logiciel"
+					title="Hi, I'm Lamiae JBIRA"
+					tagline="Soon-to-graduate software engineer from ENSEIRB-MATMECA, focused on backend development, scalable web applications and data engineering"
 				>
-
 					<div class="roles">
-    					<Pill><Icon icon="code" color="blue" size="2rem" gradient /> Développeur Logiciel</Pill>
-    					<Pill><Icon icon="globe" color="green" size="2rem" /> Développeur Web</Pill>
-    					<Pill><Icon icon="brain" color="purple" size="2rem" gradient /> Intelligence Artificielle</Pill>
+						<Pill><Icon icon="server"   color="blue"   size="2rem" gradient /> Backend Development</Pill>
+						<Pill><Icon icon="globe"    color="green"  size="2rem"            /> Web Applications</Pill>
+						<Pill><Icon icon="database" color="white" size="2rem" gradient /> Data Engineering</Pill>
 					</div>
-
-
 				</Hero>
-
-				<img
-					alt="jbira lamiae in a professional look"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
 			</header>
 
-			<Skills />
+			<Skills/>
+
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
-    			<header class="section-header stack gap-2 lg:gap-4">
-        			<h3>Mes projets</h3>
-        			<p>Jetez un œil ci-dessous à certains de mes travaux marquants réalisés pour des clients ces dernières années.</p>
-    			</header>
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>My Projects</h3>
+					<p>Below is a selection of recent work I’m proud of, showcasing the problems I solved and the value delivered.</p>
+				</header>
 
-    			<div class="gallery">
-        			<Grid variant="offset">
-            		 {
-                		projects.map((project) => (
-                    		<li>
-                        		<PortfolioPreview project={project} />
-                   			 </li>
-                		))
-            		 }
-        				</Grid>
-    			</div>
+				<div class="gallery">
+					<Grid variant="offset">
+						{projects.map((project) => (
+							<li >
+								<PortfolioPreview project={project} />
+							</li>
+						))}
+					</Grid>
+				</div>
 
-    			<div class="cta">
-        			<CallToAction href="/work/">
-            			Voir Tout
-            				<Icon icon="arrow-right" size="1.2em" />
-        			</CallToAction>
-    			</div>
+				<div class="cta">
+					<CallToAction href="/work/">
+						See All
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
+				</div>
 			</section>
-
-
-			
 		</main>
+
 
 		<ContactCTA />
 	</div>
@@ -98,9 +86,11 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles {
-		display: none;
+		display: flex;          /* aligne les enfants sur une même ligne */
+		flex-wrap: wrap;        /* passe à la ligne si besoin */
+		gap: 1rem;              /* espace régulier entre les pills */
+		justify-content: center;/* centre horizontalement */
 	}
-
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;

@@ -3,34 +3,45 @@ import Icon from './Icon.astro';
 ---
 <section class="box skills">
     <div class="stack gap-2 lg:gap-4">
-        <Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-        <h2>Développement Logiciel</h2>
+        <Icon icon="server" color="var(--accent-regular)" size="2.5rem" gradient />
+        <h2>Backend Development</h2>
         <p>
-            Solide expertise dans la conception et la mise en œuvre de logiciels complexes, avec une expérience approfondie en programmation orientée objet et en gestion de projets. Compétences en optimisation des performances et en développement d'applications robustes, assurant qualité et maintenabilité du code.
+            Strong experience designing and implementing scalable, high-performance server-side systems.
+            Proficient in Java, Spring Boot and microservice architectures, with a focus on clean code,
+            testing, and maintainability.
         </p>
     </div>
+
     <div class="stack gap-2 lg:gap-4">
-        <Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
-        <h2>Développement Web</h2>
+        <Icon icon="globe" color="var(--accent-regular)" size="2.5rem" gradient />
+        <h2>Web Applications</h2>
         <p>
-            Expérience étendue dans la création d’applications web modernes et performantes. Maîtrise des technologies front-end comme HTML, CSS, JavaScript, et frameworks tels que React. Compétences en développement back-end avec Node.js et bases de données (SQL, PostgreSQL).
+            Full-stack skills in modern web technologies: React & TypeScript on the front end,
+            RESTful APIs on the back end, responsive UI design and accessibility.
+            Comfortable with CI/CD workflows and end-to-end testing.
         </p>
     </div>
+
     <div class="stack gap-2 lg:gap-4">
-        <Icon icon="brain" color="var(--accent-regular)" size="2.5rem" gradient />
-        <h2>Intelligence Artificielle</h2>
+        <Icon icon="database" color="var(--accent-regular)" size="2.5rem" gradient />
+        <h2>Data Engineering</h2>
         <p>
-            Compétences en développement d'algorithmes de machine learning et deep learning. Expérience dans la mise en œuvre de modèles prédictifs et d’analyse de données, avec une attention particulière à l'optimisation des performances et à l'interprétation des résultats.
+            Hands-on with relational and NoSQL databases (PostgreSQL, SQLite, DynamoDB) and
+            data-pipeline design (ETL, batch & streaming). Skilled at data modelling,
+            metrics collection and analytics for real-time insights.
         </p>
     </div>
 </section>
 
 
+
 <style>
 	.box {
-		border: 1px solid var(--gray-800);
+		border: 2px solid var(--gray-800);
 		border-radius: 0.75rem;
 		padding: 1.5rem;
+        margin-block: 4rem;   /* 4rem au-dessus + en dessous */
+        padding-inline: 1rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
